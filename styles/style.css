@@ -158,6 +158,7 @@
   height: 36px;
   align-items: center;
   justify-content: center;
+  border: 2px solid transparent;
 }
 
 .card__like-button {
@@ -298,10 +299,6 @@
   outline: none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
-}
-
-.card__icon-button {
-  border: 2px solid transparent;
 }
 
 .card__icon-button:focus {
