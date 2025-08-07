@@ -1,1 +1,32 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: "Inter", sans-serif;
+  --accent-font: "Press Start 2P", fantasy;
+  --title-weight: 715;
+  --text-weight: 410;
+  --page-bg-image: 
+    /* Horizontal stripes (#d3d3d3 + transparent) */ repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    /* Vertical stripes (#d3d3d3 + transparent) */
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    /* Main gradient (smooth darkening) */
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --inline-size: clamp(375px, 48.6%, 700px);
+  --header-padding: 100px 0px;
+  --font-size-header__logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size-header__title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --main-color: #000;
+  --main-font-size: 18px;
+  --main-border: 2px solid #000;
+  --main-background-color: #fff;
+  --text-line-height: 117%;
+  --stroke-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
+  --accent-color: #000;
+  --button-text-hover: #ffffff;
+  --button-hover-color: #000;
+}
