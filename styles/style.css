@@ -151,7 +151,6 @@
 .card__icon-button {
   display: flex;
   background: transparent;
-  border: none;
   padding: 0;
   cursor: pointer;
   width: 39px;
