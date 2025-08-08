@@ -51,6 +51,7 @@
 
 .header__title {
   font-size: var(--font-size-header__title);
+  white-space: nowrap;
 }
 
 .cards {
@@ -368,7 +369,7 @@
   animation: sparks 0.3s ease-in 0.3s alternate;
 }
 
-@media (width <= 375px) {
+@media (width <= 500px) {
   .header__content {
     padding: 122px 16px;
   }
