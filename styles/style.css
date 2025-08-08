@@ -369,7 +369,7 @@
   animation: sparks 0.3s ease-in 0.3s alternate;
 }
 
-@media (width <= 500px) {
+@media (width <= 375px) {
   .header__content {
     padding: 122px 16px;
   }
