@@ -41,8 +41,8 @@
   gap: 20px;
   text-transform: uppercase;
   background-color: var(--main-background-color);
-  min-height: 368px;
   border: var(--main-border);
+  padding: 130px 122.5px;
 }
 
 .header__logo {
@@ -99,14 +99,18 @@
   color: var(--main-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  -webkit-text-stroke: 1px var(--stroke-color);
-  text-stroke: 1px var(--stroke-color);
-  text-shadow: none;
+  text-shadow: -1px -1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
+    -1px 1px 0 var(--stroke-color), 1px 1px 0 var(--stroke-color);
 }
-@supports not ((-webkit-text-stroke: 1px red) or (text-stroke: 1px red)) {
+
+@supports (
+  (-webkit-text-stroke: 1px var(--stroke-color)) or
+    (text-stroke: 1px var(--stroke-color))
+) {
   .card__label {
-    text-shadow: -1px -1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
-      -1px 1px 0 var(--stroke-color), 1px 1px 0 var(--stroke-color);
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
   }
 }
 
@@ -144,8 +148,8 @@
   background: transparent;
   position: relative;
   overflow: hidden;
-  transition: color 0.5s ease-in-out;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -158,6 +162,7 @@
   align-items: center;
   justify-content: center;
   border: 2px solid transparent;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .card__like-button {
@@ -166,17 +171,11 @@
   cursor: pointer;
 }
 
-.footer {
-  justify-content: center;
-  display: flex;
-  gap: 8px;
-}
-
 .save-button {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px auto 100px;
   padding: 17px 20px;
   background-color: var(--main-background-color);
+  display: block;
 }
 
 .dialog {
@@ -221,6 +220,8 @@
 .floppy {
   width: 21px;
   height: 21px;
+  mix-blend-mode: difference;
+  color: var(--main-background-color);
 }
 
 .dialog__image {
@@ -273,10 +274,6 @@
   z-index: 0;
 }
 
-.button:hover {
-  color: var(--button-text-hover);
-}
-
 .button:hover::before {
   transform: translateX(0);
 }
@@ -291,13 +288,11 @@
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -308,11 +303,6 @@
   outline: none;
   border-color: var(--accent-color);
   transition: border-color 0.3s ease;
-}
-
-.button:hover .floppy {
-  filter: invert(1);
-  transition: filter 0.5s ease-in-out;
 }
 
 .like-icon .contour {
@@ -380,7 +370,7 @@
 
 @media (width <= 375px) {
   .header__content {
-    min-height: 327px;
+    padding: 122px 16px;
   }
 
   .floppy {

@@ -2,8 +2,8 @@
 :root {
   --main-font: "Inter", sans-serif;
   --accent-font: "Press Start 2P", fantasy;
-  --title-weight: 715;
-  --text-weight: 410;
+  --title-weight: 715; /* В пачке через наставника урегулирован вопрос, что комментарий по жирности был ошибочный */
+  --text-weight: 410; /* В пачке через наставника урегулирован вопрос, что комментарий по жирности был ошибочный */
   --page-bg-image: 
     /* Horizontal stripes (#d3d3d3 + transparent) */ repeating-linear-gradient(
       to right,
